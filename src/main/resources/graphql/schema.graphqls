@@ -1,0 +1,32 @@
+type Customer{
+id:ID!
+firstname:String!
+lastname:String!
+email:String!
+phone:String!
+city:String!
+}
+
+type Query{
+customers:[Customer]!
+customerById(id:ID):Customer
+customerByEmail(email:String):Customer
+}
+
+input CustomerInput{
+firstname:String!
+lastname:String!
+email:String!
+phone:String!
+city:String!
+}
+
+type Mutation{
+addCustomer(
+firstname:String!
+lastname:String!
+email:String!
+phone:String!
+city:String!
+):Customer!
+}
